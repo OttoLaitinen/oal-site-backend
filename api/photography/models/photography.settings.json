@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "photographies",
+  "info": {
+    "name": "Photography",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "Yes, I do photos too!",
+      "maxLength": 25
+    },
+    "headerText": {
+      "type": "richtext"
+    },
+    "headerPicture": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.header-picture"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta.seo"
+    }
+  }
+}
