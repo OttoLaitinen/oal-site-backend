@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "photographs",
+  "info": {
+    "name": "Photograph",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta.seo",
+      "required": true
+    },
+    "photoTaken": {
+      "type": "date",
+      "required": true
+    }
+  }
+}
