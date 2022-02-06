@@ -31,6 +31,17 @@
     "photoTaken": {
       "type": "date",
       "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "regex": "[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "Otto A. Laitinen Photograph"
     }
   }
 }
